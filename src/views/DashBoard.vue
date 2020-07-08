@@ -5,7 +5,7 @@
         </v-col>
 
         <v-col cols = "10">
-            <h1>Hello World</h1> 
+            <GettingStarted/>
         </v-col>
     </v-row>
 </template>
@@ -13,11 +13,13 @@
 <script>
 
 import SidePanel from '@/components/SidePanel';
+import GettingStarted from '@/components/GettingStarted';
 
 export default {
     name: 'DashBoard',
     components:{
-        SidePanel
+        SidePanel,
+        GettingStarted
     }
 }
 </script>
