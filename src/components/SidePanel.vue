@@ -2,7 +2,7 @@
   <v-container>
     <v-navigation-drawer v-model="drawer" color="#0e1352" absolute dark>
       <v-list nav class="py-0">
-        <v-list-item two-line :class="miniVariant && 'px-0'">
+        <v-list-item>
           <v-list-item-avatar>
             <img src="https://randomuser.me/api/portraits/men/81.jpg" />
           </v-list-item-avatar>
@@ -15,9 +15,7 @@
 
         <v-divider></v-divider>
 
-        <v-list-item
-        link
-        >
+        <v-list-item link>
           <v-list-item-content>
             <v-list-item-title>Getting Started</v-list-item-title>
           </v-list-item-content>
@@ -27,6 +25,16 @@
         </v-list-item>
 
         <v-divider></v-divider>
+
+        <v-list-item link class="mb-2">
+          <v-list-item-content>
+            <NewCourse/>
+            <!-- <v-list-item-title>New Course</v-list-item-title> -->
+          </v-list-item-content>
+          <!-- <v-list-item-icon>
+            <v-icon>mdi-plus</v-icon>
+          </v-list-item-icon> -->
+        </v-list-item>
 
         <v-list-group value="true">
           <template v-slot:activator>
@@ -56,9 +64,7 @@
         </v-list-group>
 
         <v-divider></v-divider>
-        <v-list-item
-        link
-        >
+        <v-list-item link>
           <v-list-item-content>
             <v-list-item-title> Resources</v-list-item-title>
           </v-list-item-content>
@@ -66,7 +72,6 @@
             <v-icon>mdi-database-edit</v-icon>
           </v-list-item-icon>
         </v-list-item>
-
       </v-list>
 
       <template v-slot:append>
@@ -81,6 +86,7 @@
 </template>
 
 <script>
+import NewCourse from './NewCourse';
 export default {
   data() {
     return {
@@ -98,10 +104,12 @@ export default {
       let assignments = this.courses.filter((course) => {
         return course.key === key;
       });
-      console.log(key, assignments);
       return assignments[0].values;
-    },
+    }
   },
+  components:{
+    NewCourse
+  }
 };
 </script>
 
