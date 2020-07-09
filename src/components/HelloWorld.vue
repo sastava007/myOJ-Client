@@ -46,7 +46,3 @@ export default {
   name: "HelloWorld",
 };
 </script>
-
-<style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800;900&display=swap");
-</style>

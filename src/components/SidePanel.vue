@@ -29,11 +29,7 @@
         <v-list-item link class="mb-2">
           <v-list-item-content>
             <NewCourse/>
-            <!-- <v-list-item-title>New Course</v-list-item-title> -->
           </v-list-item-content>
-          <!-- <v-list-item-icon>
-            <v-icon>mdi-plus</v-icon>
-          </v-list-item-icon> -->
         </v-list-item>
 
         <v-list-group value="true">
@@ -112,7 +108,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
-</style>

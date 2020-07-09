@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import DashBoard from '../views/DashBoard.vue'
+import Assignments from '../views/Assignments.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ Vue.use(VueRouter)
     path: '/getting-started',
     name: 'DashBoard',
     component: DashBoard
+  },
+  {
+    path: '/courses/ds/assignments',
+    name: 'Assignments',
+    component: Assignments
   }
 ]
 
